@@ -1,0 +1,32 @@
+{% extends "basiclayout.html" %}
+{% block body %}
+<Title>Hydright Sign-up</title>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('hello')}}">Hydright</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	    <li><a href="{{ url_for('hello')}}">Home</a></li>
+	    <li><a href="{{ url_for('testw')}}">Weather</a></li>
+		<li class="active"><a href="{{ url_for('signup')}}">Sign-up <span class="sr-only">(current)</span></a></li>
+        <li><a href="{{ url_for('credits')}}">Credits</a></li>
+	  </ul>
+	 </div>
+  </div>
+ </nav>
+<h1>Sign-up to Hydright</h1>
+<br>
+<p>It's brilliant that you have chosen to sign-up with Hydright, just fill in your information below and click next!</p>
+<br>
+{% endblock %}
