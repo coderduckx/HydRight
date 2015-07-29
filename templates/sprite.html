@@ -18,7 +18,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 	    <li><a href="{{ url_for('hello')}}">Home</a></li>
-	    <li><a href="{{ url_for('testw')}}">Weather</a></li>
 		<li><a href="{{ url_for('signup')}}">Sign-up</a></li>
         <li><a href="{{ url_for('credits')}}">Credits</a></li>
 		<li class="active"><a href="{{ url_for('main')}}">Sprite page <span class="sr-only">(current)</span></a></li>
@@ -26,11 +25,13 @@
 	 </div>
   </div>
  </nav>
+<div class="container">
+  <div class="jumbotron">
 <h1>Hydright</h1>
 <br>
 <p>Welcome to Hydright %Name%!</p>
 <br>
-<p>Todays weather is:</p>
-return byHour.summary
-
+<p>Todays weather is:</p> {{ weather }}
+  </div>
+</div>
 {% endblock %}

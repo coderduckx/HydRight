@@ -19,21 +19,18 @@ def credits():
 
 @app.route("/Sprite")
 def main():
-    return render_template("sprite.html")
+    return render_template("sprite.html", weather=byHour.summary,)
 
 @app.route("/login")
 def login():
     return render_template("loginpage.html")
  
-@app.route("/Hydrightweathertest")
-def testw():
-        byHour = forecast.hourly()
-        return byHour.summary
-api_key = "fb394454c9b88ad96f5ccdef59d0ee57"
-lat = -31.967819
-lng = 115.87718
-forecast = forecastio.load_forecast(api_key, lat, lng)
  
 if __name__ == "__main__":
-        app.debug = True
-        app.run(debug=True)
+	api_key = "fb394454c9b88ad96f5ccdef59d0ee57"
+	lat = -31.967819
+	lng = 115.87718
+	forecast = forecastio.load_forecast(api_key, lat, lng)
+	byHour = forecast.hourly()
+	app.debug = True
+	app.run(debug=True)
