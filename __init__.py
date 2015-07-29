@@ -17,7 +17,7 @@ def signup():
 def credits():
     return render_template("credits.html")
  
-@app.route("/Sprite")
+@app.route("/Sprite", methods=['GET', 'POST'])
 def main():
     return render_template("sprite.html", weather=byHour.summary,)
  

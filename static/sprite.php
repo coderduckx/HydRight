@@ -27,8 +27,8 @@ switch ($Age) {
 
 //output the relevant information to the page
 
-echo $Age;
-echo $Weight;
-echo $Username;
-echo "You should be taking in " . $basetotal . " litres of water per day.";
+//echo $Age;
+//echo $Weight;
+//echo $Username;
+echo "Hello " . $Username . ". You should be taking in " . $basetotal . " litres of water per day.";
 ?>
