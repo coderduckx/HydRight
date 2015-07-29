@@ -20,6 +20,10 @@ def credits():
 @app.route("/Sprite")
 def main():
     return render_template("sprite.html")
+
+@app.route("/login")
+def login():
+    return render_template("loginpage.html")
  
 @app.route("/Hydrightweathertest")
 def testw():
