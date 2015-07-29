@@ -18,7 +18,6 @@ def credits():
     return render_template("credits.html")
 
 @app.route("/Sprite")
-@login_required
 def main():
     return render_template("sprite.html")
  
