@@ -16,6 +16,10 @@ def signup():
 @app.route("/HydrightCredits")
 def credits():
     return render_template("credits.html")
+
+@app.route("/Sprite")
+def main():
+    return render_template("sprite.html")
  
 @app.route("/Hydrightweathertest")
 def testw():
