@@ -18,8 +18,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 	    <li><a href="{{ url_for('hello')}}">Home</a></li>
-		<li class="active"><a href="{{ url_for('signup')}}">Sign-up <span class="sr-only">(current)</span></a></li>
         <li><a href="{{ url_for('credits')}}">Credits</a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="sr-only">(current)</span></a></li>
+        <li><a href="{{ url_for('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	  </ul>
 	 </div>
   </div>

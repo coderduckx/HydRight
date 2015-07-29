@@ -18,28 +18,26 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 	    <li><a href="{{ url_for('hello')}}">Home</a></li>
-		<li><a href="{{ url_for('signup')}}">Sign-up</a></li>
         <li class="active"><a href="{{ url_for('credits')}}">Credits <span class="sr-only">(current)</span></a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{{ url_for('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	  </ul>
 	 </div>
   </div>
  </nav>
-<h1>About those who have made this Webapp</h1>
+ <div class="container">
+  <div class="jumbotron">
+<h3><u>About those who have made this Webapp</u></h3>
 <br><br>
-<h3> Hydrite was made during the 2015 Festival of Code, organised by Young Rewired State, and held at many places across the country. This particular webapp, was made at BBC Birmingham.</h3>
+<p> Hydrite was made during the 2015 Festival of Code, organised by Young Rewired State, and held at many places across the country. This particular webapp, was made at BBC Birmingham.<p>
 <br><br><br>
+  </div>
+ </div>
 <blockquote>
     <p>Our job as the game creators or developers<br>the programmers, artists, and whatnot, is that we have to kind of put ourselves in the user's shoes. We try to see what they're seeing, and then make it, and support what we think they might think.</p>
     <footer>Shigeru Miyamoto</u> - Creator of the Legend of Zelda games</footer>
   </blockquote>
 <br>
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigation Menu
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="{{ url_for('signup')}}">Sign-up for Free!</a></li>
-    <li><a href="{{ url_for('testw')}}">Weather print page</a></li>
-    <li><a href="{{ url_for('credits')}}">Credits</a></li>
-  </ul>
-</div>
 {% endblock %}

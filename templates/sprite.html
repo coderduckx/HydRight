@@ -18,20 +18,22 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 	    <li><a href="{{ url_for('hello')}}">Home</a></li>
-		<li><a href="{{ url_for('signup')}}">Sign-up</a></li>
         <li><a href="{{ url_for('credits')}}">Credits</a></li>
 		<li class="active"><a href="{{ url_for('main')}}">Sprite page <span class="sr-only">(current)</span></a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{{ url_for('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	  </ul>
 	 </div>
   </div>
  </nav>
 <div class="container">
   <div class="jumbotron">
-<h1>Hydright</h1>
+<h2>Welcome to Hydright %Name%!</h2>
 <br>
-<p>Welcome to Hydright %Name%!</p>
-<br>
-<p>Todays weather is:</p> {{ weather }}
+<img class="img-responsive" src="{{ url_for('static', filename='person.png') }}" alt="Spritemeter">
+<p><b>Todays weather is:</b> {{ weather }} </p>
   </div>
 </div>
 {% endblock %}
