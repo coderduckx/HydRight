@@ -2,6 +2,7 @@ import forecastio
 from flask import(
         Flask,
         render_template,
+		request
 )
 app = Flask(__name__)
  
@@ -10,7 +11,7 @@ def hello():
     return render_template("index.html")
  
 @app.route("/HydrightSignup")
-def signup():
+def Hsignup():
     return render_template("signup.html")
  
 @app.route("/HydrightCredits")
@@ -19,10 +20,10 @@ def credits():
  
 @app.route("/Sprite", methods=['GET', 'POST'])
 def main():
-    return render_template("sprite.html", weather=byHour.summary,)
+    return render_template("sprite.html", weather=byHour.summary, username=request.args.get("Username",""), basetotal=request.args.get("Basetotal"))
  
-@app.route("/login")
-def login():
+@app.route("/signup")
+def signup():
     return render_template("loginpage.html")
  
 api_key = "fb394454c9b88ad96f5ccdef59d0ee57"
