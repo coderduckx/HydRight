@@ -17,7 +17,7 @@
 	
 	<body>
 	<h1>Welcome to Hydright!!!</h1>
-		<form action="http://calm-harbor-1764.herokuapp.com/sprite.php" method="POST">
+		<form action="{{ url_for('static', filename='sprite.php') }}" method="POST">
 			<div class="bodytypeoptions">
 				<h2 title="Choose the following options" class="hello"> Are you a...(click the folowing)</h2> 
 			
