@@ -31,19 +31,14 @@
 <br>
 <p align="center"><a href="{{ url_for('signup')}}" align="center" class="btn btn-primary btn-lg" role="button">Sign-Up</a></p>
 <br>
-  <div class="row">
-    <div class="col-sm-4">
-    <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Navigation Menu
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="{{ url_for('signup')}}">Sign-up for Free!</a></li>
-    <li><a href="{{ url_for('testw')}}">Weather print page</a></li>
-    <li><a href="{{ url_for('credits')}}">Credits</a></li>
-  </ul>
-</div>
-    </div>
-    <div class="col-sm-4">
+<div class="row">
+	<div class="col-sm-4">
+	<h3>Hydration information</h3>
+	<p>Females: 2.6L</p>
+	<p>Males: 3L</p>
+	<p>Children: 2L</p>
+	</div>
+<div class="col-sm-4">
       <h3>Young Rewired State</h3>        
       <p><i><img src="{{ url_for('static', filename='yrsicon.jpeg') }}" alt="YRS Icon"><p>Made at Young Rewired State's Festival of Code 2015 at BBC Birmingham</p></i></p>
     </div>
