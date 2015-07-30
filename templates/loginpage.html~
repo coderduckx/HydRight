@@ -60,7 +60,8 @@
 				<strong>Create a Password:</strong>
 				<input size=25% type="password" placeholder="Type in your password" class="hello" name="Password"> <br><br>
 				
-				<input class="submitbutton" type="submit"> <br><br>				
+				<input class="submitbutton" type="submit"> <br><br> 				
+				<a href="http://yrs15.aimeec.co.uk/YRS2015Hydright">Home page</a> 				
 			</div>
 		</form>
   </div>
