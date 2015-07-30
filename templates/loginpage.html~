@@ -1,21 +1,34 @@
-<html> 
-	<head>
-		<style> 
-			body 
-			{ 
-				background-color:aquamarine;
-				margin-left:auto;
-				text-align: center;
-			}
-	
-			strong 
-			{ 
-			color:blue;
-			}
-		</style>
-	</head>
-	
-	<body>
+{% extends "basiclayout.html" %}
+{% block body %}
+<Title>Hydright | Sign-up</title>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ url_for('hello')}}">Hydright</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	    <li><a href="{{ url_for('hello')}}">Home</a></li>
+        <li><a href="{{ url_for('credits')}}">Credits</a></li>
+	  </ul>
+	  <ul class="nav navbar-nav navbar-right">
+        <liclass="active"><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="sr-only">(current)</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	  </ul>
+	 </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
 	<h1>Welcome to Hydright!!!</h1>
 		<form action="http://yrs15.aimeec.co.uk/static/sprite.php" method="POST">
 			<div class="bodytypeoptions">
@@ -23,13 +36,7 @@
 			
 				<input TITLE="Click me if you are a male" type="radio" name="Gender" value="male">MALE
 				<input  TITLE="Click me if you are a female" type="radio" name="Gender" value="female">FEMALE 
-				 <br><br>
-				<strong>Username:</strong>
-				<input size=25% type="text" placeholder="Type in your Username" class="hello"  name="Username"> <br>
-				
-				<strong>Password:</strong>
-				<input size=25% type="password" placeholder="Type in your password" class="hello" name="Password"> <br><br>
-				
+				 <br><br>				
 				<strong> Age: </strong>
 				<select name="Age">
 				<option value="" selected disabled>Select age</option>
@@ -44,16 +51,19 @@
 				<input size=25% type="text" placeholder="Type your weight" class="weight"  name="Weight"> 
 				<br>
 			 
-				<strong>Height:</strong>
-				<input size=25% type="text" placeholder="Type your height" class="height"  name="height"><br><br> 
-				<p> Tick the any of the following boxes if you have suffered...</p> 	
-				<input type="checkbox" name="headache">Headache<br>
-				<input type="checkbox">Tiredness<br> 
-				<input type="checkbox">Dizziness<br>
+				<strong>Height (m):</strong>
+				<input size=25% type="text" placeholder="Type your height" class="height"  name="height"><br><br>
+
+				<strong>Username:</strong>
+				<input size=25% type="text" placeholder="Type in your Username" class="hello"  name="Username"> <br>
+				
+				<strong>Password:</strong>
+				<input size=25% type="password" placeholder="Type in your password" class="hello" name="Password"> <br><br>
 				
 				<input class="submitbutton" type="submit"> <br><br> 				
 				<a href="http://yrs15.aimeec.co.uk/YRS2015Hydright">Home page</a> 				
 			</div>
 		</form>
-	</body>
-</html>  
+  </div>
+</div>
+{% endblock %}
