@@ -44,8 +44,12 @@
 				<input size=25% type="text" placeholder="Type your weight" class="weight"  name="Weight"> 
 				<br>
 			 
-				<strong>Height (m):</strong>
+				<strong>Height:</strong>
 				<input size=25% type="text" placeholder="Type your height" class="height"  name="height"><br><br> 
+				<p> Tick the any of the following boxes if you have suffered...</p> 	
+				<input type="checkbox" name="headache">Headache<br>
+				<input type="checkbox">Tiredness<br> 
+				<input type="checkbox">Dizziness<br>
 				
 				<input class="submitbutton" type="submit"> <br><br> 				
 				<a href="http://yrs15.aimeec.co.uk/YRS2015Hydright">Home page</a> 				
