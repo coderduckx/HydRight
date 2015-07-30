@@ -9,8 +9,8 @@ img {
 
 .glass {
     margin: 30px auto;
-    height: 280px;
-    width: 100px;
+    height: 560px;
+    width: 200px;
     position: relative;
     background-image: src="resources/avatar.png";
 /*    border-style: none solid solid solid;

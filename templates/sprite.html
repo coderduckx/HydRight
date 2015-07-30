@@ -32,7 +32,11 @@
   <div class="jumbotron">
 <h2>Welcome to Hydright {{ username }}</h2>
 <br>
+<<<<<<< HEAD
 <img class="img-responsive" src="resources/avatar.png" alt="Spritemeter">
+=======
+<img class="img-responsive" src="{{ url_for('static', filename='person.png') }}" alt="Spritemeter">
+>>>>>>> bdf00606c720999aa5bc3def3f17c117e477fb30
 <br>
 <p>You should be taking in {{ basetotal }} litres of water per day.</p>
 <p><b>Todays weather is:</b> {{ weather }} </p>
