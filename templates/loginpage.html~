@@ -54,10 +54,10 @@
 				<strong>Height (m):</strong>
 				<input size=25% type="text" placeholder="Type your height" class="height"  name="height"><br><br>
 
-				<strong>Username:</strong>
+				<strong>Create a Username:</strong>
 				<input size=25% type="text" placeholder="Type in your Username" class="hello"  name="Username"> <br>
 				
-				<strong>Password:</strong>
+				<strong>Create a Password:</strong>
 				<input size=25% type="password" placeholder="Type in your password" class="hello" name="Password"> <br><br>
 				
 				<input class="submitbutton" type="submit"> <br><br> 				
