@@ -1,18 +1,29 @@
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
 .glass {
     margin: 30px auto;
-    height: 300px;
+    height: 280px;
     width: 100px;
     position: relative;
-    border-style: none solid solid solid;
+    background-image: src="resources/avatar.png";
+/*    border-style: none solid solid solid;
     border-width: 10px;
     border-color: lightgray;
-    border-radius: 10px;
+    border-radius: 10px;*/
 }
 
 #water {
     width: 100%;
-    height: 10%;
+    height: 0%;
     background-color: skyblue;
     position: absolute;
     bottom: 0;
+    z-index: -1;
 }
