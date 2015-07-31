@@ -18,9 +18,11 @@ function getValue()
 	toadd = parseInt(document.waterlevel.fill.value);
 	sofar=sofar + toadd;
 
-	alert("So far you've had " + sofar + " millitres of water");
+	// alert("So far you've had " + sofar + " millitres of water");
+	document.getElementById("sofar").textContent=sofar;
 	var level=sofar / basetotal * 100;
-	alert("This is " + level + "% of your goal")
+	// alert("This is " + level + "% of your goal");
+	document.getElementById("percentage").textContent=level;
 	// var level=document.waterlevel.fill.value;
 	// alert(level);
 	fillcup(parseInt(level,10));
@@ -30,6 +32,7 @@ function getValue()
 $(function fillcup(level)
 {
 	$("#waterlevel").submit(function(level) {
+		
 		level=document.waterlevel.fill.value;
 		
 		$('.water').animate({
