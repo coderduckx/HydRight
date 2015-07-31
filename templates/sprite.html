@@ -1,5 +1,9 @@
 {% extends "basiclayout.html" %}
 {% block body %}
+<head>
+<script src="{{ url_for('static', filename='watertest.js') }}"></script>
+
+</head>
 <Title>Hydright</title>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -28,15 +32,28 @@
 	 </div>
   </div>
  </nav>
+
+
 <div class="container">
-  <div class="jumbotron">
 <h2>Welcome to Hydright {{ username }}</h2>
-<br>
-<img class="img-responsive" src="resources/avatar.png" alt="Spritemeter">
-<img class="img-responsive" src="{{ url_for('static', filename='person.png') }}" alt="Spritemeter">
-<br>
-<p>You should be taking in {{ basetotal }} litres of water per day.</p>
+<br><!-- 
+<p>You should be taking in {{ basetotal }} litres of water per day.</p> -->
+<p>You should be taking in <span id="target"> </span> millitres of water per day.</p>
+<p>So far you have consumed <span id="sofar"></span> millitres of water today.</p>
+<p> This is <span id="percentage"></span>% of your daily recommended intake.</p>
+
 <p><b>Todays weather is:</b> {{ weather }} </p>
-  </div>
+<form method="POST" onsubmit="getValue()" id="waterlevel" name="waterlevel">
+  Today I have drank (ml): <input type="text" id="fill" name="fill"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<div class="glass">
+    <div id="water" class="water"></div>
+    <img src="{{ url_for('static', filename='avatar.png')}}">
+</div>
+<br>
+
+
 </div>
 {% endblock %}

@@ -5,10 +5,11 @@
 
 </head>
 
-<body>
 
-<form method="POST" onsubmit="getValue()" id="waterlevel" name="waterlevel">
-  Percentage fill: <input type="text" id="fill" name="fill"><br>
+<body>
+Your target for the day is <script> document.write(basetotal); </script>
+<form method="POST" onsubmit="getValue()" id="waterdrunk" name="waterdrunk">
+  Water consumed (litres): <input type="text" id="fill" name="fill"><br>
   <input type="submit" value="Submit">
 </form>
 

@@ -1,5 +1,5 @@
 body {
-    background-color: #66E0FF;
+    background-color: #F0F0F0 ;
 }
 
 h1 {
@@ -13,4 +13,33 @@ h5 {
 
 p {
 	font-family: "Trebuchet MS", Ubuntu, Tahoma, Helvetica, Geneva, sans-serif;
+}
+
+
+.glass {
+    margin: 10px auto;
+    height: 438px;
+    width: 19%;
+    position: relative;
+/*    background-image: url("avatar.png") no-repeat;*/
+}
+
+img {
+    position: absolute;
+
+    height: auto%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+
+#water {
+    width: 100%;
+    height: 0%;
+    background-color: skyblue;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
 }
