@@ -18,8 +18,9 @@ p {
 
 .glass {
     margin: 10px auto;
-    width: 19%;
-    position: relative;
+    width: 50%;
+    position: absolute;
+    right:20px;
 /*    border-style: solid;
     border-color: green;*/
 /*    background-image: url("avatar.png") no-repeat;*/

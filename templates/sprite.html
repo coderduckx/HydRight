@@ -35,44 +35,47 @@
 
 
 <div class="container">
-<h2>Welcome to Hydright {{ username }}</h2>
-<br><!-- 
-<p>You should be taking in {{ basetotal }} litres of water per day.</p> -->
-<p>You should be taking in <span id="target"> </span> millitres of water per day.</p>
+  <div class="col-sm-6">
+    <h2>Welcome to Hydright {{ username }}</h2>
+    <br><!-- 
+    <p>You should be taking in {{ basetotal }} litres of water per day.</p> -->
+    <p>You should be taking in <span id="target"> </span> millitres of water per day.</p>
 
-<p><b>Todays weather is:</b> {{ weather }} </p>
-<br>
-<p>So far you have consumed <strong><span id="sofar">0</span></strong> millitres of water today.</p>
-<p> This is <strong><span id="percentage">0</span>%</strong> of your daily recommended intake.</p>
+    <p><b>Todays weather is:</b> {{ weather }} </p>
+    <br>
+    <p>So far you have consumed <strong><span id="sofar">0</span></strong> millitres of water today.</p>
+    <p> You are <strong><span id="percentage">0</span>%</strong> towards hydration.</p>
 
-<br>
-<form method="POST" id="waterlevel" name="waterlevel">
-  Today I have drank (ml): <input type="text" id="fill" name="fill"><br>
-  <input type="submit" value="Submit">
-</form>
-
-<br>
-<form method="POST" id="exercise" name="exercise">
-        Log exercise:
-        <select name="Exercise" id="Exercise">
-        <option value="" selected disabled>Select level</option>
-        <option value="heavy">Heavy</option>
-        <option value="moderate">Moderate</option> 
-        <option value="light">Light</option> 
-      </select>
-
-      <div id="spinner">
-        Number of minutes:
-      <a id="down" href="#" onclick="updateSpinner(this);">-</a><input id="content" value="0" type="text" style="width:30px" /><a id="up" href="#"  onclick="updateSpinner(this);">+</a>
-      </div>
+    <br>
+    <form method="POST" id="waterlevel" name="waterlevel">
+      Today I have drank (ml): <input type="text" id="fill" name="fill"><br>
       <input type="submit" value="Submit">
-</form>
+    </form>
 
-<div class="glass">
-    <div id="water" class="water"></div>
-    <img id="man" src="{{ url_for('static', filename='avatar.png')}}">
-</div>
-<br>
+    <br>
+    <form method="POST" id="exercise" name="exercise">
+            Log exercise:
+            <select name="Exercise" id="Exercise">
+            <option value="" selected disabled>Select level</option>
+            <option value="heavy">Heavy</option>
+            <option value="moderate">Moderate</option> 
+            <option value="light">Light</option> 
+          </select>
+
+          <div id="spinner">
+            Number of minutes:
+          <a id="down" href="#" onclick="updateSpinner(this);">-</a><input id="content" value="0" type="text" style="width:30px" /><a id="up" href="#"  onclick="updateSpinner(this);">+</a>
+          </div>
+          <input type="submit" value="Submit">
+    </form>
+  </div>
+    <div class="col-sm-6">
+      <div class="glass">
+          <div id="water" class="water"></div>
+          <img id="man" src="{{ url_for('static', filename='avatar.png')}}">
+      </div>
+    <br>
+  </div>
 
 
 </div>
