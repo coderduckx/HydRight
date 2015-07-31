@@ -42,8 +42,8 @@
 
 <p><b>Todays weather is:</b> {{ weather }} </p>
 <br>
-<p>So far you have consumed <span id="sofar"></span> millitres of water today.</p>
-<p> This is <span id="percentage"></span>% of your daily recommended intake.</p>
+<p>So far you have consumed <strong><span id="sofar">0</span></strong> millitres of water today.</p>
+<p> This is <strong><span id="percentage">0</span>%</strong> of your daily recommended intake.</p>
 
 <br>
 <form method="POST" id="waterlevel" name="waterlevel">
@@ -52,6 +52,7 @@
 </form>
 
 <br>
+<form method="POST" id="exercise" name="exercise">
         Log exercise:
         <select name="Exercise" id="Exercise">
         <option value="" selected disabled>Select level</option>
@@ -59,6 +60,13 @@
         <option value="moderate">Moderate</option> 
         <option value="light">Light</option> 
       </select>
+
+      <div id="spinner">
+        Number of minutes:
+      <a id="down" href="#" onclick="updateSpinner(this);">-</a><input id="content" value="0" type="text" style="width:30px" /><a id="up" href="#"  onclick="updateSpinner(this);">+</a>
+      </div>
+      <input type="submit" value="Submit">
+</form>
 
 <div class="glass">
     <div id="water" class="water"></div>
