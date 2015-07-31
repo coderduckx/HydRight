@@ -5,7 +5,8 @@ from flask import(
 		request
 )
 app = Flask(__name__)
- 
+
+@app.route("/")
 @app.route("/YRS2015Hydright")
 def hello():
     return render_template("index.html")

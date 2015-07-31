@@ -1,5 +1,5 @@
 body {
-    background-color: #F0F0F0 ;
+    background-color: #006699 ;
 }
 
 h1 {
@@ -25,6 +25,7 @@ p {
 /*    background-image: url("avatar.png") no-repeat;*/
 }
 
+<<<<<<< HEAD
 #man {
 /*    position: absolute;*/
 
@@ -37,6 +38,8 @@ p {
     border-color: red;*/
 }
 
+=======
+>>>>>>> 91d24d6663793bc66a4920f2a8f9df62d1f9b3a3
 
 #water {
     width: 100%;
