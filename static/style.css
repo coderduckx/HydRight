@@ -1,5 +1,5 @@
 body {
-    background-color: #F0F0F0 ;
+    background-color: #006699 ;
 }
 
 h1 {
@@ -24,6 +24,7 @@ p {
 /*    background-image: url("avatar.png") no-repeat;*/
 }
 
+<!-- 
 img {
     position: absolute;
 
@@ -33,7 +34,7 @@ img {
     top: 0px;
     z-index: 0;
 }
-
+-->
 
 #water {
     width: 100%;
