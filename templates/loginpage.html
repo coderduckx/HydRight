@@ -8,6 +8,7 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
+
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
@@ -19,48 +20,59 @@
       <ul class="nav navbar-nav">
 	    <li><a href="{{ url_for('hello')}}">Home</a></li>
         <li><a href="{{ url_for('credits')}}">Credits</a></li>
+		<li class="active"><a href="{{ url_for('main')}}">Sprite page <span class="sr-only">(current)</span></a></li>
 	  </ul>
 	  <ul class="nav navbar-nav navbar-right">
-        <liclass="active"><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="sr-only">(current)</span></a></li>
+        <li><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	  </ul>
 	 </div>
   </div>
 </nav>
 <div class="container">
-  <div class="jumbotron">
-	<h1>Welcome to Hydright</h1>
-		<form action="http://yrs15.aimeec.co.uk/static/sprite.php" method="POST">
+  <div class="row-fluid">
+	<img id="titlepic" class="center-block" src="{{ url_for('static', filename='Izzie2.png') }}"> 
+		<form action="{{ url_for('main') }}" method="GET">
 			<div class="bodytypeoptions">
-				<h2 title="Choose the following options" class="hello"> Are you a...(click the folowing)</h2> 
-			
-				<input TITLE="Click me if you are a male" type="radio" name="Gender" value="male">MALE
-				<input  TITLE="Click me if you are a female" type="radio" name="Gender" value="female">FEMALE 
-				 <br><br>				
+				<h2 title="Choose the following options" class="hello"> Are you a...(click the folowing)</h2> <br>
+				<!-- <div class="radio"> -->
+				<p><span id="radiocircle"><input TITLE="Click me if you are a male"  type="radio" class="radio-inline" name="Gender" value="male"></span><span id="radiolabels"><strong>Male</strong></span>
+				<span id="radiocircle"><input  TITLE="Click me if you are a female"  type="radio" class="radio-inline" name="Gender" value="female"></span><span id="radiolabels"><strong>Female</strong></span></P>
+<!-- 			</div> -->
+
+<!-- 				<label for="Male">
+    			<input type="radio" name="Gender" value="male" id="male"> <span>Male</span>
+  				</label>
+  				  <label for="Female">
+    <input type="radio" name="Gender" value="female" id="female"> <span>Female</span>
+  </label> -->
+
+
+				<br><P>			
 				<strong> Age: </strong>
-				<select name="Age">
+				<select class="form-control" name="Age">
 				<option value="" selected disabled>Select age</option>
 				<option value="under 16">under 16</option>
 				<option value="16-30">16-30</option> 
 				<option value="31-54">31-54</option> 
 				<option value="55-64">55-64</option> 
-				<option value="65+">65+</option>
+				<option value="65+">65+</option></p>
 				
-				</select><BR><BR>  
+				</select><BR>  
 				<strong>Weight (kg):</strong>
-				<input size=25% type="text" placeholder="Type your weight" class="weight"  name="Weight"> 
+				<input size=25% type="text" id="fill1" placeholder="Type your weight" class="weight"  name="Weight"> 
 				<br>
 			 
 				<strong>Height (m):</strong>
-				<input size=25% type="text" placeholder="Type your height" class="height"  name="height"><br><br>
+				<input size=25% type="text" id="fill1" placeholder="Type your height" class="height"  name="height"><br><br>
 
 				<strong>Create a Username:</strong>
-				<input size=25% type="text" placeholder="Type in your Username" class="hello"  name="Username"> <br>
+				<input size=25% type="text" id="fill2" placeholder="Type in your Username" class="hello"  name="Username"> <br>
 				
 				<strong>Create a Password:</strong>
-				<input size=25% type="password" placeholder="Type in your password" class="hello" name="Password"> <br><br>
+				<input size=25% type="password" id="fill3" placeholder="Type in your password" class="hello" name="Password"> <br><br>
 				
-				<input class="submitbutton" type="submit"> <br><br>				
+				<input type="submit" id="submit1" class="btn btn-default" value="Submit"> <br><br>				
 			</div>
 		</form>
   </div>

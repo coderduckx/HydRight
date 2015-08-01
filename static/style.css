@@ -7,20 +7,30 @@ h1 {
 	font-family: "Trebuchet MS", Ubuntu, Tahoma, Helvetica, Geneva, sans-serif;
 }
 
+h2 {
+    font-size: 25px;
+}
+
 h5 {
 	font-family: "Trebuchet MS", Ubuntu, Tahoma, Helvetica, Geneva, sans-serif;
 }
 
-p {
+p, #down, #up {
+    font-size: 20px;
 	font-family: "Trebuchet MS", Ubuntu, Tahoma, Helvetica, Geneva, sans-serif;
 }
 
+/*.navbar-brand img {
+        height: 45px;
+        margin-top: 0px;
+        margin-left: 0px;
+    }*/
 
 .glass {
     margin: 10px auto;
-    width: 50%;
+    width: 65%;
     position: absolute;
-    right:20px;
+    left:10px;
 /*    border-style: solid;
     border-color: green;*/
 /*    background-image: url("avatar.png") no-repeat;*/
@@ -52,4 +62,137 @@ p {
 #spinner,a
 {
     text-decoration: none;
+}
+
+#fill
+{
+    width: 70px;
+    height: 30px;
+}
+
+#fill1
+{
+    width: 180px;
+    height: 30px;
+}
+
+#fill2
+{
+    width: 235px;
+    height: 30px;
+}
+
+#fill3
+{
+    width: 225px;
+    height: 30px;
+}
+
+#content
+{
+    height: 30px;
+}
+
+.btn-default
+{
+    height:30px;
+    text-align: center;
+}
+
+.circle .btn {
+    border-radius: 40px;
+    background: #000;
+    border: #000;
+}
+.circle {
+    width: 100%;
+    padding: 10%;
+    background: white;
+    border-radius: 50px;
+}
+.circle-wrapper {
+    margin: 0 5%;
+    position: relative;
+}
+.circle .list-inline {
+    font-size: 0px;
+    margin: 0;
+}
+.circle .list-inline li {
+    font-size: 20px;
+    display: block;
+}
+.circle p {
+    padding-top: 10%;
+    margin: 0;
+}
+@media (min-width:230px) { 
+    .circle .list-inline li {
+        font-size: 50px;
+        display: inline-block;
+    }
+    .circle-wrapper {
+        max-width: 230px;
+        position: relative;
+        margin:0 auto;
+    }
+    .circle {
+        height: 0px;
+        padding: 50%;
+        border-radius: 50%;
+    }
+    .circle > div {
+        position: absolute;
+        text-align: center;
+        left: 10%;
+        right: 10%;
+        top: 53%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        top:20%\9; /* ie8 hack test this out it's a guess */
+    }
+
+}
+
+#spinner .btn
+{
+    border-radius: 40px;
+    border: #000;
+    height:30px;
+    text-align: center;
+}
+
+#titlepic
+{
+    width: 50%;
+
+}
+
+.bodytypeoptions
+{
+    text-align: center;
+}
+
+.form-control
+{
+    width: 200px;
+    text-align: center;
+    margin:auto;
+}
+
+#radiolabels
+{
+    display:inline-block;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:5px;
+
+}
+
+#radiocircle
+{
+    display:inline-block;
+    margin:10px;
+    padding-bottom: 0px;
 }

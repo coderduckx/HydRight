@@ -20,7 +20,7 @@ switch ($Age) {
 	case "55-64":
 		$Basetotal = $Weight * 0.030;
 		break;
-	case "64+":
+	case "65":
 		$Basetotal = $Weight * 0.025;
 		break;
 }
